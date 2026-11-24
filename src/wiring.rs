@@ -20,9 +20,6 @@ pub struct Ports {
 static TX_BUF: StaticCell<[u8; 256]> = StaticCell::new();
 static RX_BUF: StaticCell<[u8; 256]> = StaticCell::new();
 
-static TX_BUF: StaticCell<[u8; 256]> = StaticCell::new();
-static RX_BUF: StaticCell<[u8; 256]> = StaticCell::new();
-
 pub fn configure(p: Peripherals) -> (crate::board::Usb, Ports, Option<Swd>) {
     let usb = crate::board::usb(p.USB_OTG_HS, p.PA12, p.PA11);
 
